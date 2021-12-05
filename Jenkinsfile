@@ -7,8 +7,10 @@ pipeline {
             }
 
             steps {
-                echo "Started stage A"
-                timeout(time: 5, unit: "SECONDS")
+              echo "Started stage A"
+              options {
+                timeout(time: 3, unit: "SECONDS")
+              }
             }
         }
 
