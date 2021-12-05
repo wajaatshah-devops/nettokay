@@ -1,42 +1,22 @@
 pipeline {
-   agent any
+    agent any
 
-   environment {
-     // You must set the following environment variables
-     // ORGANIZATION_NAME
-     // YOUR_DOCKERHUB_USERNAME (it doesn't matter if you don't have one)
+    stages {
+        stage("A") {
+            options {
+                timeout(time: 3, unit: "SECONDS")
+            }
 
-     //SERVICE_NAME = "fleetman-api-gateway"
-     //REPOSITORY_TAG="${YOUR_DOCKERHUB_USERNAME}/${ORGANIZATION_NAME}-${SERVICE_NAME}:${BUILD_ID}"
-   }
-
-   stages {
-      stage('Preparation') {
-        steps {
-            cleanWs()
-            //git credentialsId: 'GitHub', url: "https://github.com/${ORGANIZATION_NAME}/${SERVICE_NAME}"
-        
+            steps {
+                echo "Started stage A"
+                sleep(time: 5, unit: "SECONDS")
+            }
         }
-      }
-      stage('Build') {
-        steps {
-            //sh '''mvn clean package'''
-            echo 'build stage'
-        }
-      }
 
-      stage('Build and Push Image') {
-        steps {
-        //    sh 'docker image build -t ${REPOSITORY_TAG} .'
-            echo 'build and push image'
+        stage("B") {
+            steps {
+                echo "Started stage B"
+            }
         }
-      }
-
-      stage('Deploy to Cluster') {
-        steps {
-            // sh 'envsubst < ${WORKSPACE}/deploy.yaml | kubectl apply -f -'
-            echo 'deploy stage'
-        }
-      }
-   }
+    }
 }
