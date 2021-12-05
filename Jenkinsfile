@@ -9,7 +9,6 @@ pipeline {
                 echo "Started stage A"
             }
         }
-
         stage("B") {
             steps {
                 echo "Started stage B"
