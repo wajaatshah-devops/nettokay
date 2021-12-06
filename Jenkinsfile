@@ -11,6 +11,7 @@ pipeline {
       stage('Checkout SCM') {
          steps {
             cleanWs()
+            sh 'cd /var/lib/jenkins/workspace/nettokay-pipeline/'
             git credentialsId: 'Github', url: "https://github.com/${ORGANIZATION_NAME}/${SERVICE_NAME}"
          }
       }
