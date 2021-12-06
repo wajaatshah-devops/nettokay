@@ -11,7 +11,6 @@ pipeline {
       stage('Checkout SCM') {
          steps {
             cleanWs()
-            sh 'cd /var/lib/jenkins/workspace/nettokay-pipeline/'
             git credentialsId: 'Github', url: "https://github.com/${ORGANIZATION_NAME}/${SERVICE_NAME}"
          }
       }
@@ -19,6 +18,8 @@ pipeline {
          steps {
             sh 'echo "Working Directory ---->"'
             sh 'pwd'
+            sh 'cd /var/lib/jenkins'
+            sh 'pwd'            
             sh 'ls'
             sh 'docker build -t ${REPOSITORY_TAG} .'
          }
