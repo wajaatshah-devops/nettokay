@@ -21,13 +21,13 @@ pipeline {
             sh 'cd /var/lib/jenkins'
             sh 'pwd'            
             sh 'ls'
-            sh 'sudo docker build -t ${REPOSITORY_TAG} .'
+            sh 'docker build -t ${REPOSITORY_TAG} .'
          }
       }
 
       stage('Run docker image') {
          steps {
-           sh 'sudo docker container run -d -p 80:80 ${REPOSITORY_TAG}'
+           sh 'docker container run -d -p 80:80 ${REPOSITORY_TAG}'
          }
       }
    }
