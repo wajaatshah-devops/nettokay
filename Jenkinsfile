@@ -18,6 +18,7 @@ pipeline {
          steps {
             sh 'echo "Working Directory ---->"'
             sh 'pwd'
+            sh 'ls'
             sh 'docker build -t ${REPOSITORY_TAG} .'
          }
       }
