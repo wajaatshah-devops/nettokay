@@ -43,4 +43,8 @@ testem.log
 
 # System Files
 .DS_Store
+B
 Thumbs.db
+
+/node_modules
+package-lock.json

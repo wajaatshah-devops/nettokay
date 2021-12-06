@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nettokay-app": {
+    "nettokay": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nettokay-app",
+            "outputPath": "dist/nettokay",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,13 +27,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.js"
-            ] 
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -72,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "nettokay-app:build:production"
+              "browserTarget": "nettokay:build:production"
             },
             "development": {
-              "browserTarget": "nettokay-app:build:development"
+              "browserTarget": "nettokay:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nettokay-app:build"
+            "browserTarget": "nettokay:build"
           }
         },
         "test": {
@@ -106,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "nettokay-app"
+  "defaultProject": "nettokay"
 }
