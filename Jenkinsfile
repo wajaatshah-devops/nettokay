@@ -14,12 +14,6 @@ pipeline {
             git credentialsId: 'Github', url: "https://github.com/${ORGANIZATION_NAME}/${SERVICE_NAME}"
          }
       }
-      stage('Build') {
-         steps {
-            sh 'ng build'
-         }
-      }
-
       stage('Build and Push Image') {
          steps {
            sh 'docker build -t ${REPOSITORY_TAG} .'
