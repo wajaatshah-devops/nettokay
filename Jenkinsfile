@@ -16,7 +16,9 @@ pipeline {
       }
       stage('Build and Push Image') {
          steps {
-           sh 'docker build -t ${REPOSITORY_TAG} .'
+            sh 'echo "Working Directory ---->"'
+            sh 'pwd'
+            sh 'docker build -t ${REPOSITORY_TAG} .'
          }
       }
 
