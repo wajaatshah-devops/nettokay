@@ -45,6 +45,3 @@ testem.log
 .DS_Store
 B
 Thumbs.db
-
-/node_modules
-package-lock.json

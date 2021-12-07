@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+#navMobile{
+    display: none;
+}
+
+#companyHeader{
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 60px;
+    margin-left: 2%;
+}
+
+@media screen and (max-width:480px) {
+    #nav{
+        display: none;
+    }
+    #logo{
+        padding-top: 10%;
+    }
+    #navMobile{
+        display: block;
+    }
+    #hamburgerMenu{
+        margin-left: 20%;
+    }
+    #companyHeader{
+        color: white;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.menulist {
+    margin-top: 10%;
+    width:100px;
+    margin-left: 60%;
+    text-align: right;
+}
