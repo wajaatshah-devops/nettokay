@@ -1,10 +1,13 @@
-<div class="row">
-    <nav id="nav" class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="nav" class="navbar navbar-expand bg-dark navbar-dark">
       <a id="logo" class="navbar-brand" href="#">
-        <img src="..\assets\images\logo.png" alt="Logo" style="width:150px; margin-left: 30%;">
+        <img src="..\assets\images\logo.png" alt="Logo" style="width:150px;">
       </a>
       <h1 id="companyHeader">NettoKay</h1>
-      <ul class="navbar-nav position-sticky" style="margin-left: 48%;">
+      <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">Link 1</a>
           </li>
@@ -14,10 +17,10 @@
           <li class="nav-item">
               <a class="nav-link" href="#">Link 2</a>
             </li>
-        </ul>         
+      </ul>   
     </nav>
-
-    <nav id="navMobile" class="navbar navbar-expand-sm bg-dark navbar-dark">
+    
+    <nav id="navMobile" class="navbar navbar-expand-xl bg-dark navbar-dark">
       <a id="logo" class="navbar-brand mb-2" href="#">
         <img src="..\assets\images\logo.png" alt="Logo" style="width:150px;">
       </a>        
@@ -35,6 +38,6 @@
       </div>
     </nav>
   </div>
-
+</div>
 
 <router-outlet></router-outlet>
