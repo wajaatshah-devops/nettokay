@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'ethno';
+    src: url(src\assets\fonts\ethnocentric-italic.ttf);
+    font-style: normal;
+    font-weight:100;
+}
+
+body{
+    background-color: orange;
+}
+#navMobile{
+    display:none;
+}
+
+#navMobile{
+    display: none;
+}
+
+#companyHeader{
+    color: white;
+    font-family: 'ethno';
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.menulist {
+    margin-top: 10%;
+    width:100px;
+    margin-left: 60%;
+    text-align: right;
+}
+
+
+@media screen and (min-width:640px) and (max-width:1024px) {
+    #nav{
+        display: none;
+    }
+    #logo{
+        padding-top: 10%;
+    }
+    #navMobile{
+        display: block;
+    }
+    #hamburgerMenu{
+        float: right;
+        margin-top: 14%;
+        margin-right: 2%;
+    }
+    #companyHeader{
+        color: white;
+        font-family: 'ethno';
+        font-weight: bold;
+        font-size: 40px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:30px) and (max-width:639px) {
+    #nav{
+        display: none;
+    }
+    #logo{
+        padding-top: 10%;
+    }
+    #navMobile{
+        display: block;
+    }
+    #hamburgerMenu{
+        float: right;
+        margin-top: 18%;
+        margin-right: 10%;
+    }
+    #companyHeader{
+        margin-top: 2%;
+        color: white;
+        font-family: 'ethno';
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+    #companyHeader{
+        color: white;
+        font-family: 'ethno';
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+}
